@@ -148,4 +148,12 @@ public class ReplyBody implements Serializable, Transportable {
 	public DataType getType() {
 		return DataType.REPLY;
 	}
+
+	public static ReplyBody make(String key,int code,String message){
+		ReplyBody body = new ReplyBody();
+		body.key = key;
+		body.code = String.valueOf(code);
+		body.message = message;
+		return body;
+	}
 }

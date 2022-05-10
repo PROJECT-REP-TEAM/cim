@@ -33,4 +33,6 @@ public interface CIMConstant {
 
 	String CLIENT_CONNECT_CLOSED = "client_closed";
 
+	String CLIENT_HANDSHAKE = "client_handshake";
+
 }
