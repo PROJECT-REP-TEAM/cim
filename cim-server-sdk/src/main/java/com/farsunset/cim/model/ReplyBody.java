@@ -111,6 +111,10 @@ public class ReplyBody implements Serializable, Transportable {
 		this.code = code.toString();
 	}
 
+	public Map<String, String> getData() {
+		return data;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
