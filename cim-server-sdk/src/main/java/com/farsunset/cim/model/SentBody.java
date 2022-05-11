@@ -77,13 +77,11 @@ public class SentBody implements Serializable {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("[SentBody]").append("\n");
-		builder.append("key:").append(key).append("\n");
-		builder.append("timestamp:").append(timestamp).append("\n");
-
-		builder.append("data:{");
+		builder.append("key       :").append(this.getKey()).append("\n");
+		builder.append("timestamp :").append(timestamp).append("\n");
+		builder.append("data      :").append("\n{");
 		data.forEach((k, v) -> builder.append("\n").append(k).append(":").append(v));
-		builder.append("\n}");
-
+		builder.append(data.isEmpty() ? "" : "\n").append("}");
 		return builder.toString();
 	}
 

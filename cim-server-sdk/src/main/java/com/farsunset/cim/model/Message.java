@@ -156,14 +156,14 @@ public class Message implements Serializable, Transportable,Cloneable {
 	public String toString() {
 		StringBuffer buffer = new StringBuffer();
 		buffer.append("#Message#").append("\n");
-		buffer.append("id:").append(id).append("\n");
-		buffer.append("action:").append(action).append("\n");
-		buffer.append("title:").append(title).append("\n");
-		buffer.append("content:").append(content).append("\n");
-		buffer.append("extra:").append(extra).append("\n");
-		buffer.append("sender:").append(sender).append("\n");
-		buffer.append("receiver:").append(receiver).append("\n");
-		buffer.append("format:").append(format).append("\n");
+		buffer.append("id       :").append(id).append("\n");
+		buffer.append("sender   :").append(sender).append("\n");
+		buffer.append("receiver :").append(receiver).append("\n");
+		buffer.append("action   :").append(action).append("\n");
+		buffer.append("content  :").append(content).append("\n");
+		buffer.append("format   :").append(format).append("\n");
+		buffer.append("extra    :").append(extra).append("\n");
+		buffer.append("title    :").append(title).append("\n");
 		buffer.append("timestamp:").append(timestamp);
 		return buffer.toString();
 	}

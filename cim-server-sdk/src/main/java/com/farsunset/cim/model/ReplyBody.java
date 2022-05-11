@@ -119,13 +119,13 @@ public class ReplyBody implements Serializable, Transportable {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("[ReplyBody]").append("\n");
-		builder.append("key:").append(this.getKey()).append("\n");
-		builder.append("timestamp:").append(timestamp).append("\n");
-		builder.append("code:").append(code).append("\n");
-
-		builder.append("data:{");
+		builder.append("key       :").append(this.getKey()).append("\n");
+		builder.append("code      :").append(code).append("\n");
+		builder.append("message   :").append(message).append("\n");
+		builder.append("timestamp :").append(timestamp).append("\n");
+		builder.append("data      :").append("\n{");
 		data.forEach((k, v) -> builder.append("\n").append(k).append(":").append(v));
-		builder.append("\n}");
+		builder.append(data.isEmpty() ? "" : "\n").append("}");
 
 		return builder.toString();
 	}
