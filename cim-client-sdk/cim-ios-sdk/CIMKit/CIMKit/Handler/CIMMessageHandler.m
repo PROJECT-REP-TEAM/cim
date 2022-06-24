@@ -138,7 +138,7 @@
 }
 -(void)handlerConnectClose{
     [self runOnMainThread:^{
-        for (NSValue *value in self.messageObservers) {
+        for (NSValue *value in self.connectionObservers) {//Fix:connectionObservers
             id<CIMConnectionObserver> ob = [value nonretainedObjectValue];
             if ([ob respondsToSelector:@selector(cimDidConnectClose)]) {
                 [ob cimDidConnectClose];
@@ -174,7 +174,7 @@
 
 -(void)removePeerMessageObservers:(id<CIMPeerMessageObserver>)objects{
     NSValue *value = [NSValue valueWithNonretainedObject:objects];
-    if (![self.messageObservers containsObject:value]) {
+    if ([self.messageObservers containsObject:value]) { // Fix:!
         [self.messageObservers removeObject:value];
     }
 }
